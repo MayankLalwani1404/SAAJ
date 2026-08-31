@@ -10,7 +10,7 @@ export default function Collections() {
   useEffect(() => {
     if (hash === '#collections-sarees') setActive('Sarees');
     else if (hash === '#collections-lehengas') setActive('Lehengas');
-    else if (hash === '#collections-bridal-couture') setActive('Bridal Couture');
+    else if (hash === '#collections-bridal-couture') setActive('Bridal');
   }, [hash]);
 
   const filtered =
