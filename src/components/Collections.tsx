@@ -1,9 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { products, categories, type Category } from '@/data/products';
 import { Plus } from 'lucide-react';
 
 export default function Collections() {
   const [active, setActive] = useState<Category>('All');
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash === '#collections-sarees') setActive('Sarees');
+    else if (hash === '#collections-lehengas') setActive('Lehengas');
+    else if (hash === '#collections-bridal-couture') setActive('Bridal Couture');
+  }, [hash]);
 
   const filtered =
     active === 'All' ? products : products.filter((p) => p.category === active);

@@ -12,16 +12,8 @@ export default function App() {
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* Shop Links */}
-            <Route path="/sarees" element={<PlaceholderPage title="Sarees" />} />
-            <Route path="/lehengas" element={<PlaceholderPage title="Lehengas" />} />
-            <Route path="/bridal-couture" element={<PlaceholderPage title="Bridal Couture" />} />
-            <Route path="/menswear" element={<PlaceholderPage title="Menswear" />} />
-            <Route path="/new-arrivals" element={<PlaceholderPage title="New Arrivals" />} />
             {/* House Links */}
             <Route path="/sustainability" element={<PlaceholderPage title="Sustainability" />} />
-            <Route path="/press" element={<PlaceholderPage title="Press" />} />
-            <Route path="/careers" element={<PlaceholderPage title="Careers" />} />
             {/* Client Care Links */}
             <Route path="/shipping" element={<PlaceholderPage title="Shipping" />} />
             <Route path="/returns" element={<PlaceholderPage title="Returns" />} />

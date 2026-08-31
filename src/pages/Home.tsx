@@ -14,7 +14,9 @@ export default function Home() {
   useEffect(() => {
     if (hash) {
       setTimeout(() => {
-        const element = document.getElementById(hash.substring(1));
+        const id = hash.substring(1);
+        const elementId = id.startsWith('collections-') ? 'collections' : id;
+        const element = document.getElementById(elementId);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }

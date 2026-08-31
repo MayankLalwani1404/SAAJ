@@ -5,11 +5,9 @@ const columns = [
   {
     title: 'Shop',
     links: [
-      { label: 'Sarees', path: '/sarees' },
-      { label: 'Lehengas', path: '/lehengas' },
-      { label: 'Bridal Couture', path: '/bridal-couture' },
-      { label: 'Menswear', path: '/menswear' },
-      { label: 'New Arrivals', path: '/new-arrivals' },
+      { label: 'Sarees', path: '/#collections-sarees' },
+      { label: 'Lehengas', path: '/#collections-lehengas' },
+      { label: 'Bridal Couture', path: '/#collections-bridal-couture' },
     ],
   },
   {
@@ -18,8 +16,6 @@ const columns = [
       { label: 'Our Heritage', path: '/#heritage' },
       { label: 'The Craft', path: '/#craft' },
       { label: 'Sustainability', path: '/sustainability' },
-      { label: 'Press', path: '/press' },
-      { label: 'Careers', path: '/careers' },
     ],
   },
   {
