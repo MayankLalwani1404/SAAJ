@@ -1,17 +1,36 @@
 import { Instagram, Facebook, Youtube } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const columns = [
   {
     title: 'Shop',
-    links: ['Sarees', 'Lehengas', 'Bridal Couture', 'Menswear', 'New Arrivals'],
+    links: [
+      { label: 'Sarees', path: '/sarees' },
+      { label: 'Lehengas', path: '/lehengas' },
+      { label: 'Bridal Couture', path: '/bridal-couture' },
+      { label: 'Menswear', path: '/menswear' },
+      { label: 'New Arrivals', path: '/new-arrivals' },
+    ],
   },
   {
     title: 'House',
-    links: ['Our Heritage', 'The Craft', 'Sustainability', 'Press', 'Careers'],
+    links: [
+      { label: 'Our Heritage', path: '/#heritage' },
+      { label: 'The Craft', path: '/#craft' },
+      { label: 'Sustainability', path: '/sustainability' },
+      { label: 'Press', path: '/press' },
+      { label: 'Careers', path: '/careers' },
+    ],
   },
   {
     title: 'Client Care',
-    links: ['Appointments', 'Shipping', 'Returns', 'Garment Care', 'FAQs'],
+    links: [
+      { label: 'Appointments', path: '/#visit' },
+      { label: 'Shipping', path: '/shipping' },
+      { label: 'Returns', path: '/returns' },
+      { label: 'Garment Care', path: '/garment-care' },
+      { label: 'FAQs', path: '/faqs' },
+    ],
   },
 ];
 
@@ -50,13 +69,13 @@ export default function Footer() {
               </p>
               <ul className="space-y-3">
                 {col.links.map((l) => (
-                  <li key={l}>
-                    <a
-                      href="#"
+                  <li key={l.label}>
+                    <Link
+                      to={l.path}
                       className="text-sm text-stone-400 hover:text-gold-300 transition-colors"
                     >
-                      {l}
-                    </a>
+                      {l.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -67,9 +86,9 @@ export default function Footer() {
         <div className="mt-14 pt-8 border-t border-stone-800 flex flex-col sm:flex-row justify-between gap-4 text-xs text-stone-500">
           <p>© 2026 Saaj Couture. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-stone-300 transition-colors">Privacy</a>
-            <a href="#" className="hover:text-stone-300 transition-colors">Terms</a>
-            <a href="#" className="hover:text-stone-300 transition-colors">Cookies</a>
+            <Link to="/privacy" className="hover:text-stone-300 transition-colors">Privacy</Link>
+            <Link to="/terms" className="hover:text-stone-300 transition-colors">Terms</Link>
+            <Link to="/cookies" className="hover:text-stone-300 transition-colors">Cookies</Link>
           </div>
         </div>
       </div>
